@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"> Product Catalogue </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/products">Product Listings</a></li>
+          <li><a href="/manufacturers">Manufacturer Listings</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <p><%= description %></p>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src=<%= product.imageUrl %> alt="..." />
+            <div class="caption">
+              <h3><%= product.name %></h3>
+              <p>
+                <a href=/manufacturers/<%= product.manufacturerId %>>See more products from this manufacturer</a>
+              </p>
+
+              <p></p>
+              <p>Description Placeholder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
